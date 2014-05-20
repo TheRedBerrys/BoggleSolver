@@ -9,7 +9,7 @@ namespace BoggleSolver
     {
         static void Main(string[] args)
         {
-            string[] input = System.IO.File.ReadAllLines("input.txt");
+            string[] input = System.IO.File.Exists("input.txt") ? System.IO.File.ReadAllLines("input.txt") : System.IO.File.ReadAllLines("../../input.txt");
             string gridString = "";
             foreach (string line in input)
                 gridString += line;

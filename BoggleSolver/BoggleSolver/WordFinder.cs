@@ -43,7 +43,7 @@ namespace BoggleSolver
         /// <summary>
         /// The list of English words this class will use to determine validity of words
         /// </summary>
-        private static string[] words = System.IO.File.ReadAllLines("dictionary.txt");
+        private static string[] words = System.IO.File.Exists("dictionary.txt") ? System.IO.File.ReadAllLines("dictionary.txt") : System.IO.File.ReadAllLines("../../dictionary.txt");
 
         /// <summary>
         /// Checks for the validity of a given string, using a list of English words.
